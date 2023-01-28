@@ -1,5 +1,9 @@
 !function() {
-    while(showdown === undefined); // make sure showdown loads before anything
+    document.querySelectorAll('*[align="center"]').forEach(elem => {
+        elem.style.margin = '0 auto';
+        elem.style.textAlign = 'center';
+    });
+    while(typeof showdown === 'undefined'); // make sure showdown loads before anything
     const converter = new showdown.Converter();
 
     const searchForm = document.querySelector('section#search form');
