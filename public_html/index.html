@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>LinuxFAQ</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" type="text/css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" type="text/css" />
+        <link rel="stylesheet" href="./index.css" type="text/css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js" type="text/javascript" integrity="sha512-LhccdVNGe2QMEfI3x4DVV3ckMRe36TfydKss6mJpdHjNFiV07dFpS2xzeZedptKZrwxfICJpez09iNioiSZ3hA==" crossorigin="anonymous" async></script>
+    </head>
+    <body>
+        <div class="hero">
+            <nav class="container-fluid">
+                <ul>
+                    <li><a href="#" class="reload-btn"><strong>LinuxFAQ</strong></a></li>
+                </ul>
+                <ul>
+                    <li><a href="#creators" data-tooltip="Content creators" data-placement="bottom"><i class="bi bi-youtube"></i></a></li>
+                    <li><a href="https://github.com/LinuxFAQ/linuxfaq" data-tooltip="Contribute" data-placement="bottom"><i class="bi bi-github"></i></a></li>
+                    <li><a href="#" data-tooltip="Join the community" data-placement="left"><i class="bi bi-discord"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <header>
+            <hgroup align="center">
+                <h1>LinuxFAQ</h1>
+                <h2>Solving all your Linux problems!</h2>
+            </hgroup>
+        </header>
+
+        <main class="container">
+            <section id="search">
+                <form>
+                    <label for="search">
+                        Find an answer <i class="bi bi-search"></i>
+                        <input type="text" name="search" placeholder="Enter your question..." required />
+                    </label>
+                    <input type="submit" value="Search" />
+                </form>
+                <div class="search-results" align="center"></div>
+                <em>Can't find something? Ask for help on Discord.</em>
+            </section>
+            <section id="about">
+                <hgroup>
+                    <h1>About LinuxFAQ</h1>
+                </hgroup>
+                <hr />
+                <div>
+                    <p>LinuxFAQ is a community compilation of frequent questions and/or problems with Linux and their possible solutions. The goal of this project is to help guide new users in their endeavors.</p>
+                    <p>Contributions can be made on GitHub.</p>
+                </div>
+            </section>
+            <section id="details">
+                <hgroup>
+                    <h1>Technical details</h1>
+                </hgroup>
+                <hr />
+                <div>
+                    <p>If you're reading this, you're probably wondering all the technical details of how LinuxFAQ works.</p>
+                    <p>Here is a pretty straightforward explanation about everything:</p>
+                    <ul>
+                        <li><strong>Privacy</strong> <u>LinuxFAQ will NOT accept or log any personal data directly.</u> However, LinuxFAQ makes use of multiple services, such as: AWS (Server Hosting), GitHub (Repository Hosting), Cloudflare (Security), unpkg (CDN), jsDelivr (CDN), and Discord (Community Chat). Users may want to refer to each of these service's Terms of Service and/or Privacy Policy for more information.</li>
+                        <li><strong>Backend</strong> The backend (server side) is powered by Axum. It is hosted as a normal HTTP server, and secured with Cloudflare for HTTPS. The FAQ data is then cached from the repository.</li>
+                        <li><strong>Frontend</strong> The frontend (client side) uses XML HTTP requests to get updated information from the server.</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="creators">
+                <hgroup>
+                    <h1>Content creators</h1>
+                </hgroup>
+                <hr />
+                <div>
+                    <p>New to Linux? These content creators may be worth checking out!</p>
+                    <p><em>Note: This list is not comprehensive, ordered, or ranked. These content creators are not affiliated with LinuxFAQ.</em></p>
+                    <ul>
+                        <li><b>DistroTube</b>: <a href="https://www.youtube.com/@DistroTube">YouTube</a></li>
+                        <li><b>Brodie Robertson</b>: <a href="https://www.youtube.com/@BrodieRobertson">YouTube</a></li>
+                        <li><b>Luke Smith</b>: <a href="https://www.youtube.com/@LukeSmithxyz">YouTube</a></li>
+                        <li><b>Mental Outlaw</b>: <a href="https://www.youtube.com/@MentalOutlaw">YouTube</a></li>
+                        <li><b>NetworkChuck</b>: <a href="https://www.youtube.com/@NetworkChuck">YouTube</a></li>
+                        <li><b>Chris Titus Tech</b>: <a href="https://www.youtube.com/@ChrisTitusTech">YouTube</a></li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <footer align="center">
+            <p>&copy; 2023 Ty Qualters, et al. Project licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3.0</a>.</p>
+        </footer>
+        <article id="article" style="display: none;"></article>
+    </body>
+    <script src="./index.js" type="text/javascript" defer></script>
+</html>

@@ -1,0 +1,26 @@
+[data-theme=light],
+[data-theme=dark],
+:root {
+    /* Note: To override Pico defaults, variables must be declared with !important */
+    --hero-color: #00a6dd !important;   
+}
+
+.hero {
+    background-color: var(--hero-color);
+}
+
+nav > ul > li { 
+    font-size: 1.2rem !important;
+}
+
+nav > ul > li a {
+    color: #fff !important;
+}
+
+header {
+    background: transparent;
+}
+
+html {
+    scroll-behavior: smooth;
+}
